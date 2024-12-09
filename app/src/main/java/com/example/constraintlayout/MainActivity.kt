@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
             compartilharResultado()
         }
 
+
+
     }
     
     fun calcularResultants() {
@@ -83,8 +85,10 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
             tts.stop()
         }
         if (ttsSucess) {
+            tts.language = Locale("pt", "BR")
             Log.d("PDM23", tts.language.toString())
-            tts.speak(resultants.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
+            val texto = String.format(Locale.getDefault(), "%.2f", resultants)
+            tts.speak(texto.toString(), TextToSpeech.QUEUE_FLUSH, null, null)
         }
     }
 

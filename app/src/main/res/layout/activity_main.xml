@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Valor da Conta"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
