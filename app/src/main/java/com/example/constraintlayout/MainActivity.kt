@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() , TextWatcher, TextToSpeech.OnInitListe
     private fun compartilharResultado() = if (resultants!= 0.0) {
         val intent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, "O valor final calculado foi: $resultants")
+            putExtra(Intent.EXTRA_TEXT, "O valor final calculado foi:R$ $resultants")
         }
         startActivity(Intent.createChooser(intent, "Compartilhar via"))
     } else {
